@@ -22,12 +22,11 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "/" # Root of your app
-          output_location: "build" # Azure Static Web Apps expects 'build'
+          app_location: "/"
+          output_location: "dist"
           skip_app_build: false
-          app_build_command: "npm run build && mv dist build"
+          app_build_command: "npm run build"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
