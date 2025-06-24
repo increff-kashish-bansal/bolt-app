@@ -23,6 +23,7 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
           app_location: "/" # Root of your app
           output_location: "build" # Azure Static Web Apps expects 'build'
           skip_app_build: false
