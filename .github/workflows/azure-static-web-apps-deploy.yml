@@ -26,7 +26,6 @@ jobs:
           app_location: "/" # Root of your app
           output_location: "build" # Azure Static Web Apps expects 'build'
           skip_app_build: false
-          skip_glob: "**/*.md"
           app_build_command: "npm run build && mv dist build"
 
   close_pull_request_job:
